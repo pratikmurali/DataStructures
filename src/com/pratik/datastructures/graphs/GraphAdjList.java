@@ -106,7 +106,7 @@ public class GraphAdjList extends Graph {
 			System.out.println("There was a cycle in the graph");
 		}
 
-		System.out.println("Priting the topological order");
+		System.out.println("Printing the topological order");
 		toporder.stream().forEach(System.out::println);
 	}
 
