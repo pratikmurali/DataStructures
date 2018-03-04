@@ -31,7 +31,7 @@ public class Stack<E> {
 
 	public void push(E data) {
 
-		Node node = new Node(data);
+		Node<E> node = new Node<E>(data);
 		node.next = top;
 		top = node;
 

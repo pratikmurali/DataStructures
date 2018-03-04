@@ -49,7 +49,7 @@ public class BinaryTree<E extends Comparable<? super E>> {
 	 * 
 	 * @param node
 	 */
-	public void postorder(TreeNode root) {
+	public void postorder(TreeNode<E> root) {
 
 		if (root == null) {
 			return;
@@ -65,7 +65,7 @@ public class BinaryTree<E extends Comparable<? super E>> {
 	 * 
 	 * @param node
 	 */
-	public void preorder(TreeNode root) {
+	public void preorder(TreeNode<E> root) {
 
 		if (root == null) {
 			return;
