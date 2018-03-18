@@ -16,8 +16,7 @@ class TwoSum {
     /** Add the number to an internal data structure.. */
     public void add(int number) {
         
-        int count = map.containsKey(number)?map.get(number):0;
-        map.put(number,count+1);
+        map.put(number,map.getOrDefault(number,0)+1);
     }
     
     /** Find if there exists any pair of numbers which sum is equal to the value. */
