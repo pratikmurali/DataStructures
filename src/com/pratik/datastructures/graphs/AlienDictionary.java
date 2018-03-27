@@ -1,6 +1,7 @@
 package com.pratik.datastructures.graphs;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
@@ -21,8 +22,6 @@ public class AlienDictionary {
 		Map<Character, Set<Character>> graph = new HashMap<>();
 		// Build a map to store the indegrees of the characters
 		Map<Character, Integer> indegree = new HashMap<>();
-		// Store the result in string
-		String result = "";
 
 		// Initialize the indegree map for all the characters.
 		for (String word : words) {
@@ -55,10 +54,15 @@ public class AlienDictionary {
 					// add a vertex from c1 to c2
 					if (graph.containsKey(c1)) {
 						graph.get(c1).add(c2);
-						// increment the indegree of c2
-						indegree.put(c2, indegree.get(c2) + 1);
 					}
-					// break when you find first differing character.
+//					} else {
+//						Set<Character> set = new HashSet<>();
+//						set.add(c2);
+//						graph.put(c1,set);
+//					}
+					// increment the indegree of c2
+					indegree.put(c2, indegree.get(c2) + 1);
+					// break since you found first differing character.
 					break;
 				}
 			}
@@ -106,7 +110,7 @@ public class AlienDictionary {
 
 	public static void main(String[] args) {
 
-		String[] alienDictionary = { "wrt", "wrf", "er", "ett", "rftt" };
+		String[] alienDictionary = { "baa", "abcd", "abca", "cab", "cad" };
 
 		System.out.println("The order of the alphabet in the alien language =" + alienOrder(alienDictionary));
 
