@@ -28,7 +28,8 @@ public class GraphAdjList extends Graph {
 	@Override
 	public List<Integer> getNeighbors(int v) {
 
-		return new ArrayList(adjListsMap.get(v));
+		//Return a copy of the list.
+		return new ArrayList<Integer>(adjListsMap.get(v));
 	}
 
 	/**
