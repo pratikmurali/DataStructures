@@ -3,6 +3,8 @@ package com.pratik.datastructures.dp;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -128,6 +130,33 @@ public class WordBreakProblem {
 		return null;
 
 	}
+	
+	public static void wordBreak(String strWord, Set<String> strDict) {
+     
+        wordBreakHelper(strWord, strWord.length(), strDict, "");
+
+ }
+
+	
+	public static void wordBreakHelper(String s, int n, Set<String> dict, String result) {
+
+		for (int i = 1; i <= n; i++) {
+
+			String prefix = s.substring(0, i);
+
+			if (dict.contains(prefix)) {
+
+				if (i == n) {
+					result += prefix;
+					System.out.println(result);
+				}
+
+				wordBreakHelper(s.substring(i, n), n - i, dict, result + prefix + " ");
+			}
+
+		}
+
+	}
 
 	public static void main(String[] args) {
 
@@ -140,7 +169,8 @@ public class WordBreakProblem {
 		Set<String> dict = new HashSet<>(Arrays.asList(arr));
 		// System.out.println(segmentStringNaive(s,dict));
 		// assert("blue fox".equals(segmentStringNaive(s,dict)));
-		 System.out.println(segmentStringRecursiveDP(ss,dict));
+		 //System.out.println(segmentStringRecursiveDP(ss,dict));
+		 wordBreak(ss,dict);
 		//segmentStringRecursive(ss, dict);
 		// assert("quick blue fox jumped over the
 		// fence".equals(segmentStringRecursive(ss,dict)));
