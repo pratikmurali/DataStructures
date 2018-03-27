@@ -78,9 +78,7 @@ public class BinaryTree<E extends Comparable<? super E>> {
 	}
 	
 	/**
-	 * Use a deque to print a tree in spiral order.
-	 * Tushar Roy's solution :
-	 * https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/TreeTraversalInSpiralOrder.java
+	 * Level order uses a plain ol' BFS
 	 * @param root
 	 */
 	public void levelOrder(TreeNode<E> root) {
@@ -113,7 +111,9 @@ public class BinaryTree<E extends Comparable<? super E>> {
 	}
 	
 	/**
-	 * 
+	 * Use a deque to print a tree in spiral order.
+	 * Tushar Roy's solution :
+	 * https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/TreeTraversalInSpiralOrder.java
 	 * @param root
 	 */
 	public void spiralOrder(TreeNode<E> root) {
@@ -193,12 +193,12 @@ public class BinaryTree<E extends Comparable<? super E>> {
 			// Walk down from the root. (No Parent Pointer)
 			TreeNode<E> tempRoot = root;
 			while (tempRoot != null) {
-				if (current.key.compareTo(root.key) < 0) {
+				if (current.key.compareTo(tempRoot.key) < 0) {
 					// walk down left subtree
-					succ = root;
-					root = root.left;
-				} else if (current.key.compareTo(root.key) > 0) {
-					root = root.right;
+					succ = tempRoot;
+					tempRoot = tempRoot.left;
+				} else if (current.key.compareTo(tempRoot.key) > 0) {
+					tempRoot = tempRoot.right;
 				}
 			}
 
