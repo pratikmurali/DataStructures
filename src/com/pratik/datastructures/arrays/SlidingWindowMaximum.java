@@ -111,8 +111,10 @@ public class SlidingWindowMaximum {
 
 	public static void main(String[] args) {
 
-		int[] a = { 1, 3, -1, -3, 5, 3, 6, 7 };
-		int w = 3;
+		//int[] a = { 1, 3, -1, -3, 5, 3, 6, 7 };
+		//int w = 3;
+		int[] a = {7,2,4};
+		int w = 2;
 		//slidingWindowMaximum(a, w);
 		slidingWindowMaximumQ(a, w);
 		
