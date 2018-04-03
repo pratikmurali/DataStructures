@@ -8,8 +8,10 @@
 5. Maps
 6. Queues
 7. Recursion
-8. Sorting
-9. Stacks
-10. Strings
-11. Trees
-12. Tries
+8. Searching
+9. Sorting
+10. Stacks
+11. Strings
+12. Trees
+13. Tries
+14. Union Find
