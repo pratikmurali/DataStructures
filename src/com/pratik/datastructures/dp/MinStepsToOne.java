@@ -117,8 +117,8 @@ public class MinStepsToOne {
 			dp[i] = ans;
 		}
 
-		//Just to see what the DP array looks like.
-		Arrays.stream(dp).forEach(System.out::print);
+		//Uncomment to see what the DP array looks like.
+		//Arrays.stream(dp).forEach(System.out::print);
 		return dp[n];
 	}
 	
