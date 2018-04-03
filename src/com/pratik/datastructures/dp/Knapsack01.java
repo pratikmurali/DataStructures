@@ -3,6 +3,12 @@ package com.pratik.datastructures.dp;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * DP problem 1/0 Knapsack
+ * @author pratikm
+ *
+ */
+
 public class Knapsack01 {
 
 	// Key for a Memo map: [Remaining Weight, Remaining Items : Max Value]
