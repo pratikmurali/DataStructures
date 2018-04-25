@@ -153,6 +153,25 @@ public class LinkedList<E extends Comparable<E>> {
 		return mth.val;
 
 	}
+	
+	public Node<E> reverse(Node<E> head) {
+
+		Node<E> prev = null;
+		Node<E> forward = null;
+		Node<E> curr = head;
+
+		while (curr != null) {
+			forward = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = forward;
+		}
+
+		head = prev;
+
+		return head;
+
+	}
 
 	public boolean isEmpty() {
 
@@ -181,6 +200,12 @@ public class LinkedList<E extends Comparable<E>> {
 		list.list();
 		System.out.println("Deleting 27 in the middle :");
 		list.remove(27);
+		list.list();
+		System.out.println("Reversing list");
+		list.head = list.reverse(list.head);
+		list.list();
+		System.out.println("Reversing again");
+		list.head = list.reverse(list.head);
 		list.list();
 
 	}
