@@ -90,7 +90,7 @@ public class Quicksort {
 	
 	public static void main(String[] args) {
 		
-		String[] arr = {"Pratik","Mohit","Joel","Parul","Ravneet","Chuyi","Sung","Ashkon"};
+		String[] arr = {"Aarhus","Delhi","Beijing","Richmond","Lima","Beunos Aires","Yerevan","Paris","Tokyo","Zagreb","Cairo","Bangalore"};
 		System.out.println("Before:"+Arrays.toString(arr));
 		sort(arr);
 		System.out.println("After:"+Arrays.toString(arr));
