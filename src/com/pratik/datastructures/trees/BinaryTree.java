@@ -453,6 +453,27 @@ public class BinaryTree<E extends Comparable<? super E>> {
 		return false;
 	}
 	
+	public static Pair<Integer,Integer> diameterAndHeight(TreeNode root) {
+		
+		if(root == null) {
+			return new Pair(0,0);
+		}
+		
+		Pair<Integer,Integer> lo = diameterAndHeight(root.left);
+		Pair<Integer,Integer> ro = diameterAndHeight(root.right);
+		
+		int height = 1 + Math.max(lo.getK(), ro.getK());
+		
+		int option1 = lo.k + ro.k;
+		int option2 = lo.v;
+		int option3 = ro.v;
+		
+		int diameter =  Math.max(option1, Math.max(option2, option3));
+		
+		return new Pair(height,diameter);
+		
+	}
+	
 	/**
 	 * Create an Integer Binary Tree
 	 */
@@ -470,6 +491,23 @@ public class BinaryTree<E extends Comparable<? super E>> {
 		intTree.root.right.left.left = new TreeNode<Integer>(10);
 		return intTree;
 	}
+	
+	private static BinaryTree<Integer> createExoticBinaryTreeToFindDiameter() {
+		BinaryTree<Integer> intTree = new BinaryTree<>();
+		intTree.root = new TreeNode<>(5);
+		intTree.root.left = new TreeNode<>(3);
+		intTree.root.left.left = new TreeNode<>(2);
+		intTree.root.right = new TreeNode(4);
+		intTree.root.right.left = new TreeNode(3);
+		intTree.root.right.left.left = new TreeNode(4);
+		intTree.root.right.left.left.right = new TreeNode(6);
+		intTree.root.right.right = new TreeNode(8);
+		intTree.root.right.right.left = new TreeNode(7);
+		intTree.root.right.right.right = new TreeNode(9);
+		intTree.root.right.right.right.left = new TreeNode(10);
+
+		return intTree;
+	}
 
 	public static void main(String[] args) {
 		BinaryTree<Integer> tree = createIntegerBinaryTree();
@@ -478,6 +516,12 @@ public class BinaryTree<E extends Comparable<? super E>> {
 		//tree.preorder(tree.root);
 		BinaryTree<Integer> tree1 = createIntegerBinaryTree();
 		System.out.println(tree.serialize(tree1.root));
+		
+		
+		BinaryTree<Integer> exoticTree = createExoticBinaryTreeToFindDiameter();
+		tree.levelOrder(exoticTree.root);
+		System.out.println();
+		System.out.println("Diameter of the tree = "+diameterAndHeight(exoticTree.root).getV());
 		
 
 	}
