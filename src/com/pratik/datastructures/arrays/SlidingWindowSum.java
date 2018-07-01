@@ -24,6 +24,7 @@ public class SlidingWindowSum {
 		
 		for (int j = k; j < nums.length; j++) {
 
+			//Add one at the end, remove one from the begining.
 			maxWindowSum = maxWindowSum - nums[j - k] + nums[j];
 			maxSum = Math.max(maxSum, maxWindowSum);
 
