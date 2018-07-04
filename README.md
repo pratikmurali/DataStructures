@@ -71,10 +71,18 @@
     7. [Check if one String is a permutation of the other](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringCheckPermutation.java)
     8. [Group Anagrams Together](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringGroupAnagrams.java)
     9. [Check if Strings are One Edit Distance Away](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringOneEditDistance.java)
-    10.[Check if String is a permutation of a palindrome](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringPermutationPalindrome.java)
-    11.[Check if String has all Unique Characters](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringUniqueCharacter.java)
-    12.[URL'ify CTCI](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringUrlify.java)
-    13.[String pattern match](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringWordPattern.java)
+    10. [Check if String is a permutation of a palindrome](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringPermutationPalindrome.java)
+    11. [Check if String has all Unique Characters](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringUniqueCharacter.java)
+    12. [URL'ify CTCI](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringUrlify.java)
+    13. [String pattern match](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringWordPattern.java)
 13. Trees
+    1. [Binary Search Tree](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trees/BinarySearchTree.java)
+    2. [Binary Tree](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trees/BinaryTree.java)
+    3. [Binary Tree Iterative](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trees/BinaryTreeIterative.java)
+    4. [Pair (for Diameter)](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trees/Pair.java)
 14. Tries
+    1. [Trie Implementation](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trie/Trie.java)
+    2. [Trie based contact list](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trie/TrieContactList.java)
 15. Union Find
+    1. [Quick Find](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/unionfind/QuickFind.java)
+    2. [Quick Union](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/unionfind/QuickUnion.java)
