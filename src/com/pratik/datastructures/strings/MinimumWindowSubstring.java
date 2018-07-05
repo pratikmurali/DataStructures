@@ -5,8 +5,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * 
- * @author pratikm
+ * Different approaches to Substring problems.
+ * @author pratikm 
  * Minimum Window Substring.
  */
 public class MinimumWindowSubstring {
@@ -57,16 +57,16 @@ public class MinimumWindowSubstring {
 		}
 
 		String minimumWindowSubstring = "";
-        int minLength = Integer.MAX_VALUE;
+		int minLength = Integer.MAX_VALUE;
 
 		for (int i = 0; i < S.length(); i++) {
 			for (int j = i + 1; j <= S.length(); j++) {
 				String sub = S.substring(i, j);
 				if (check(sub, T)) {
-					System.out.println("Found Match "+sub+" and "+T);
+					System.out.println("Found Match " + sub + " and " + T);
 					if (sub.length() <= minLength) {
 						minimumWindowSubstring = sub;
-                        minLength = sub.length();
+						minLength = sub.length();
 					}
 
 				}
@@ -77,7 +77,66 @@ public class MinimumWindowSubstring {
 	}
 
 	/**
-	 * Using the Sliding Window Template.
+	 * Uses the famous Leetcode Sliding Window Template.
+	 * 
+	 * @param s
+	 * @param t
+	 * @return
+	 */
+
+	public static String minWindowSliding(String s, String t) {
+
+		if (t.length() > s.length())
+			return "";
+
+		Map<Character, Integer> map = new HashMap<>();
+
+		for (char c : t.toCharArray()) {
+			map.put(c, map.getOrDefault(c, 0) + 1);
+		}
+
+		int counter = map.size();
+		int begin = 0;
+		int end = 0;
+		int head = 0;
+		int len = Integer.MAX_VALUE;
+
+		while (end < s.length()) {
+
+			char c = s.charAt(end);
+			if (map.containsKey(c)) {
+				map.put(c, map.get(c) - 1);
+				if (map.get(c) == 0)
+					counter--;
+			}
+
+			end++;
+
+			while (counter == 0) {
+				char tmp = s.charAt(begin);
+				if (map.containsKey(tmp)) {
+					map.put(tmp, map.get(tmp) + 1);
+					if (map.get(tmp) > 0)
+						counter++;
+				}
+
+				if (end - begin < len) {
+					len = end - begin;
+					head = begin;
+				}
+
+				begin++;
+			}
+
+		}
+
+		if (len == Integer.MAX_VALUE)
+			return "";
+
+		return s.substring(head, head + len);
+	}
+
+	/**
 	 * 
 	 * @param strText
 	 * @param strCharacters
@@ -132,11 +191,11 @@ public class MinimumWindowSubstring {
 
 	public static void main(String[] args) {
 
-		//String S = "ADOBECODEBANC";
-		//String T = "ABC";
-		
-		String S ="bbaa";
-		String T ="aba";
+		// String S = "ADOBECODEBANC";
+		// String T = "ABC";
+
+		String S = "bbaa";
+		String T = "aba";
 
 		// System.out.println(minWindow(S,T));
 		System.out.println(minWindowBruteForce(S, T));
