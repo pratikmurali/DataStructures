@@ -227,6 +227,30 @@ public class BinaryTree<E extends Comparable<? super E>> {
 
 	}
 	
+	
+	static boolean found = false;
+	static boolean done = false;
+	public static void findInorderSucc(TreeNode root, TreeNode n) {
+
+		if (root == null || done) {
+			return;
+		}
+
+		findInorderSucc(root.left, n);
+
+		if (found) {
+			System.out.print("Inorder successor = " + root.key);
+			found = false;
+			done = true;
+			return;
+		} else if (root.key == n.key) {
+			found = true;
+		}
+
+		findInorderSucc(root.right, n);
+
+	}
+	
 	/**
 	 * Find the Least common ancestor of two nodes in a Binary Tree
 	 * @param root
@@ -511,17 +535,24 @@ public class BinaryTree<E extends Comparable<? super E>> {
 
 	public static void main(String[] args) {
 		BinaryTree<Integer> tree = createIntegerBinaryTree();
-		tree.levelOrder(tree.root);	
+		//tree.levelOrder(tree.root);	
+		tree.inorder(tree.root);
 		System.out.println("\n");
 		//tree.preorder(tree.root);
-		BinaryTree<Integer> tree1 = createIntegerBinaryTree();
-		System.out.println(tree.serialize(tree1.root));
+		//BinaryTree<Integer> tree1 = createIntegerBinaryTree();
+		//System.out.println(tree.serialize(tree1.root));
+		
+		BinaryTree<Integer> tree2 = createIntegerBinaryTree();
+		System.out.println("Find inorder successor for "+tree2.root.left.left.key);
+		findInorderSucc(tree2.root, tree2.root.left.left.right);
 		
 		
-		BinaryTree<Integer> exoticTree = createExoticBinaryTreeToFindDiameter();
-		tree.levelOrder(exoticTree.root);
-		System.out.println();
-		System.out.println("Diameter of the tree = "+diameterAndHeight(exoticTree.root).getV());
+		///BinaryTree<Integer> exoticTree = createExoticBinaryTreeToFindDiameter();
+		///tree.levelOrder(exoticTree.root);
+		///System.out.println();
+		//System.out.println("Diameter of the tree = "+diameterAndHeight(exoticTree.root).getV());
+		
+		
 		
 
 	}
