@@ -1,5 +1,11 @@
 package com.pratik.datastructures.strings;
 
+/**
+ * Rabin-Karp substring search algorithm which uses a polynomial hash
+ * (not Rabin-Karp fingerprint). Running time O(M+N). Worst case O(MN).
+ * @author pratikm
+ *
+ */
 public class RabinKarp {
 	
 	public static boolean isSubstringOf(String T, String S) {
