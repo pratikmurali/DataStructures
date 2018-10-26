@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import com.pratik.datastructures.trees.BinaryTree.TreeNode;
+
 
 public class BinaryTree<E extends Comparable<? super E>> {
 
@@ -14,6 +16,7 @@ public class BinaryTree<E extends Comparable<? super E>> {
 		E key;
 		TreeNode<E> left;
 		TreeNode<E> right;
+
 
 		TreeNode(E key) {
 			this.key = key;
@@ -496,6 +499,46 @@ public class BinaryTree<E extends Comparable<? super E>> {
 		
 		return new Pair(height,diameter);
 		
+	}
+	
+	
+	/**
+	 * Reconstruct a tree
+	 * @param inorder
+	 * @param preorder
+	 * @return
+	 */
+	public static TreeNode<Integer> reconstruct(int[] inorder, int[] preorder) {
+
+		return reconstruct(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+	}
+
+	private static TreeNode<Integer> reconstruct(int[] preorder, int prestart, int preend, int[] inorder, int instart,
+			int inend) {
+
+		if (prestart == preend || instart == inend) {
+			return null;
+		}
+
+		int rootValue = preorder[prestart];
+		TreeNode<Integer> root = new TreeNode(rootValue);
+
+		int k = -1;
+		for (int i = 0; i < inorder.length; i++) {
+			if (inorder[i] == rootValue) {
+				k = i;
+				break;
+			}
+		}
+
+		if (k == -1)
+			throw new IllegalArgumentException(" Given Inorder and Preorder don't match");
+
+		root.left = reconstruct(preorder, prestart + 1, prestart + (k - instart), inorder, instart, k - 1);
+		root.right = reconstruct(preorder, prestart + (k - instart) + 1, preend, inorder, k + 1, inend);
+
+		return root;
+
 	}
 	
 	/**
