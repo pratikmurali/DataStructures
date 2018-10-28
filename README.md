@@ -78,7 +78,7 @@
     11. [Check if String has all Unique Characters](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringUniqueCharacter.java)
     12. [URL'ify CTCI](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringUrlify.java)
     13. [String pattern match](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringWordPattern.java)
-    14. [Rabin Karp] (https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/RabinKarp.java)
+    14. [Rabin Karp](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/RabinKarp.java)
 13. Trees
     1. [Binary Search Tree](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trees/BinarySearchTree.java)
     2. [Binary Tree](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trees/BinaryTree.java)
