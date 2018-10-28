@@ -19,6 +19,8 @@
    2. [Levenstheins Edit Distance](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/dp/LevenshteinsEditDistance.java)
    3. [Min Steps to One](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/dp/MinStepsToOne.java)
    4. [Word Break Problem](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/dp/WordBreakProblem.java)
+   5. [Unique Paths 1](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/dp/UniquePaths1.java)
+   6. [Unique Paths 2](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/dp/UniquePathsII.java)
 4. Graphs
    1. [Alien Dictionary](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/graphs/AlienDictionary.java)
    2. [Alien Dictionary DFS](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/graphs/AlienDictionaryDFS.java)
@@ -55,6 +57,7 @@
     2. [MergeSort](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/sort/Mergesort.java)
     3. [Quicksort using Hoare](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/sort/Quicksort.java)
     4. [Sorter Helper](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/sort/Sorter.java)
+    5. [Counting Inversions](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/sort/CountInversions.java)
 11. Stacks
     1. [Balanced Paranthesis](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/stack/BalancedParens.java)
     2. [Basic Calculator 1](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/stack/BasicCalculator1.java)
@@ -75,6 +78,7 @@
     11. [Check if String has all Unique Characters](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringUniqueCharacter.java)
     12. [URL'ify CTCI](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringUrlify.java)
     13. [String pattern match](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/StringWordPattern.java)
+    14. [Rabin Karp] (https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/strings/RabinKarp.java)
 13. Trees
     1. [Binary Search Tree](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trees/BinarySearchTree.java)
     2. [Binary Tree](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/trees/BinaryTree.java)
@@ -86,3 +90,5 @@
 15. Union Find
     1. [Quick Find](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/unionfind/QuickFind.java)
     2. [Quick Union](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/unionfind/QuickUnion.java)
+16. Hybrid/Composite Datastructures
+    1. [LRU Cache](https://github.com/pratikmurali/DataStructures/blob/master/src/com/pratik/datastructures/hybrid/LRUCache.java)    
